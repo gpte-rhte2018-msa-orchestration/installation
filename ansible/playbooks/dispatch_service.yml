@@ -1,19 +1,20 @@
 ---
 
-- name: Deploy PostgreSQL database for dispatch service
+- name: Deploy dispatch service
   hosts: localhost
   connection: local
   gather_facts: false
   run_once: true
   vars_files:
     - group_vars/services.yml
+    - group_vars/enmasse.yml
 
   tasks:
     - import_role:
-        name: openshift_dispatch_service_postgresql
+        name: openshift_dispatch_service
       vars:
         ocp_project: "{{ project_services }}"
         ocp_project_display_name: "{{ project_services_name }}"
         ocp_project_desc: "{{ project_services_desc }}"
-        resources_dir: "{{ ocp_dir }}/dispatch-service-postgresql"
-        playbook_work_dir: "{{ work_dir }}/dispatch-service-postgresql"
+        resources_dir: "{{ ocp_dir }}/dispatch-service"
+        playbook_work_dir: "{{ work_dir }}/dispatch-service"

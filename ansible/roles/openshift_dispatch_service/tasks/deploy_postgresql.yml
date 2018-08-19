@@ -37,3 +37,13 @@
         --param=POSTGRESQL_MAX_CONNECTIONS={{ postgresql_max_connections }} \
         --param=POSTGRESQL_MAX_PREPARED_TRANSACTIONS={{ postgresql_max_prepared_transactions }} \
         -n {{ ocp_project }}
+
+- name: wait until postgresql database is up and running
+  shell: "{{ openshift_cli }} get dc {{ postgresql_service_name }} -o template --template={{ json_template }} -n {{ ocp_project }}"
+  vars:
+    json_template: '\{\{.status.readyReplicas\}\}'
+  register: result
+  until: result.stdout == "1"
+  retries: 10
+  delay: 30
+  changed_when: false
