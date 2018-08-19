@@ -1,0 +1,12 @@
+---
+
+application_name: dispatch-service
+
+postgresql_template: "{{ resources_dir }}/postgresql-persistent-template.yaml"
+postgresql_service_name: dispatch-service-postgresql
+postgresql_init_configmap: "{{ postgresql_service_name }}-init"
+postgresql_username: jboss
+postgresql_password: jboss
+postgresql_database: rhpam
+postgresql_max_connections: 100
+postgresql_max_prepared_transactions: 100
