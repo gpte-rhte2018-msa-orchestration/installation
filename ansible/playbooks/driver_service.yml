@@ -8,6 +8,7 @@
   vars_files:
     - group_vars/services.yml
     - group_vars/enmasse.yml
+    - group_vars/tools.yml
 
   tasks:
     - import_role:

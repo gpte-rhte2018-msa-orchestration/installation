@@ -49,3 +49,5 @@
   when: >
     ((install_enmasse_truststore_secret is defined and install_enmasse_truststore_secret|bool == true)) and
     (enmasse_truststore_secret_exists is failed)
+
+- include_tasks: deploy_openshift_artifacts.yml

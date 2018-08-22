@@ -53,3 +53,14 @@ send_destination_passenger_command: topic-passenger-command
 dispatch_assign_driver_expire_duration: 5M
 
 quartz_clustered: false
+
+ocp_application_template: "{{ resources_dir }}/dispatch-service-template.yaml"
+ocp_binary_build_config_template: "{{ resources_dir }}/dispatch-service-binary.yaml"
+ocp_pipeline_build_config_template: "{{ resources_dir }}/dispatch-service-pipeline.yaml"
+ocp_application_name: dispatch-service
+ocp_deployment_config: dispatch-service
+ocp_binary_build_config: "{{ ocp_application_name }}-binary"
+ocp_pipeline_build_config: "{{ ocp_application_name }}-pipeline"
+ocp_build_imagestream: redhat-openjdk18-openshift:1.4
+git_url: "gogs:3000"
+git_repository: "acme/dispatch-service"
