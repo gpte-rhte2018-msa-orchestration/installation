@@ -11,6 +11,9 @@ amqp_port: 5671
 amqp_query: transport.trustAll=false&transport.verifyHost=true
 amqp_username: user
 amqp_password: password
+amqp_jms_pool_enabled: true
+amqp_jms_pool_explicit_producer_cache_size: 10
+amqp_jms_pool_use_anonymous_producers: true
 
 spring_jms_pub_sub_domain: true
 spring_jms_session_cache_size: 10
