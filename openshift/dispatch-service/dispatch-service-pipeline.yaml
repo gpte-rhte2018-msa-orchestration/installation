@@ -37,15 +37,15 @@ objects:
               groupId = pom.groupId
               artifactId = pom.artifactId
               echo "Building version ${version}"
-              sh "mvn clean compile"
+              sh "mvn clean compile -Dcom.redhat.xpaas.repo.redhatga=true"
             }
 
             stage ('Unit Tests') {
-              sh "mvn test"
+              sh "mvn test -Dcom.redhat.xpaas.repo.redhatga=true"
             }
 
             stage ('Build Application') {
-              sh "mvn package -DskipTests=true"
+              sh "mvn package -DskipTests=true -Dcom.redhat.xpaas.repo.redhatga=true"
             }
 
             stage ('Build Image') {
