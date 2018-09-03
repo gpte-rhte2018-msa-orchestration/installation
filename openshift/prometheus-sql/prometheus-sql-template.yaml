@@ -78,8 +78,8 @@ items:
                 memory: 100Mi
             volumeMounts:
             - mountPath: /config
-              name: prometheussql-config
+              name: prometheus-sql-config
           volumes:
-            - name: prometheussql-config
+            - name: prometheus-sql-config
               configMap:
-                name: prometheussql-config
+                name: prometheus-sql-config
