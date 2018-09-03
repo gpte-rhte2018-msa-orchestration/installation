@@ -165,6 +165,7 @@ objects:
             value: ${POSTGRESQL_MAX_CONNECTIONS}
           resources:
             limits:
+              cpu: 500m
               memory: "${MEMORY_LIMIT}"
           volumeMounts:
           - name: "${DATABASE_SERVICE_NAME}-data"

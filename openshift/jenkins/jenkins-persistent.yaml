@@ -107,7 +107,11 @@ objects:
                 initialDelaySeconds: 3
                 timeoutSeconds: 240
               resources:
+                requests:
+                  cpu: 200m
+                  memory: 512Mi
                 limits:
+                  cpu: 500m
                   memory: '${MEMORY_LIMIT}'
               securityContext:
                 capabilities: {}

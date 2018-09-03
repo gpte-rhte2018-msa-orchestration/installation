@@ -36,8 +36,10 @@ items:
             name: http
           resources:
             limits:
+              cpu: 100m
               memory: 200Mi
             requests:
+              cpu: 50m
               memory: 100Mi
           volumeMounts:
           - mountPath: /var/lib/pgadmin

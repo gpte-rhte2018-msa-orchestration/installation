@@ -83,7 +83,11 @@ objects:
             timeoutSeconds: 1
           resources:
             limits:
+              cpu: 100m
               memory: 512Mi
+            requests:
+              cpu: 50m
+              memory: 200Mi
           volumeMounts:
           - mountPath: /var/lib/pgsql/data
             name: gogs-postgres-data
@@ -173,7 +177,13 @@ objects:
           ports:
           - containerPort: 3000
             protocol: TCP
-          resources: {}
+          resources:
+            limits:
+              cpu: 100m
+              memory: 200Mi
+            requests:
+              cpu: 50m
+              memory: 100Mi            
           terminationMessagePath: /dev/termination-log
           volumeMounts:
           - name: gogs-data

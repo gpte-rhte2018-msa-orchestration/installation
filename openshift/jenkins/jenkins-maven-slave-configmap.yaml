@@ -45,10 +45,10 @@ items:
             <command></command>
             <args>${computer.jnlpmac} ${computer.name}</args>
             <ttyEnabled>false</ttyEnabled>
-            <resourceRequestCpu></resourceRequestCpu>
-            <resourceRequestMemory></resourceRequestMemory>
-            <resourceLimitCpu></resourceLimitCpu>
-            <resourceLimitMemory></resourceLimitMemory>
+            <resourceRequestCpu>200m</resourceRequestCpu>
+            <resourceRequestMemory>500Mi</resourceRequestMemory>
+            <resourceLimitCpu>500m</resourceLimitCpu>
+            <resourceLimitMemory>1Gi</resourceLimitMemory>
               <envVars>
               </envVars>
               <ports/>

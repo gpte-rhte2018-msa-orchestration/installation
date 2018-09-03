@@ -46,6 +46,12 @@ items:
             - containerPort: 5000
               name: sqlagent
               protocol: TCP
+              limits:
+                cpu: 100m
+                memory: 100Mi
+              requests:
+                cpu: 50m
+                memory: 100Mi
           - name: prometheussql
             image: dbhi/prometheus-sql
             args:
@@ -65,8 +71,10 @@ items:
               protocol: TCP
             resources:
               limits:
+                cpu: 100m
                 memory: 100Mi
               requests:
+                cpu: 50m
                 memory: 100Mi
             volumeMounts:
             - mountPath: /config

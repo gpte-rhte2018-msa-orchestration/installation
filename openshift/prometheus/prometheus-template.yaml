@@ -55,6 +55,13 @@ items:
           - containerPort: 9090
             name: http
             protocol: TCP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 200Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
           volumeMounts:
           - mountPath: /etc/prometheus
             name: prometheus-config
