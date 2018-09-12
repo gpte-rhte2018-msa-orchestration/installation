@@ -2100,6 +2100,13 @@ data:
                 name: jolokia
               - containerPort: 8080
                 name: artemismetrics
+              resources:
+                limits:
+                  cpu: 500m
+                  memory: 1500Mi
+                requests:
+                  cpu: 200m
+                  memory: 500Mi
               readinessProbe:
                 exec:
                   command:
@@ -2238,6 +2245,13 @@ data:
                   path: /probe
                   port: http
                   scheme: HTTP
+              resources:
+                limits:
+                  cpu: 100m
+                  memory: 150Mi
+                requests:
+                  cpu: 50m
+                  memory: 100Mi              
               volumeMounts:
               - mountPath: /opt/agent/authservice-ca
                 name: authservice-ca
