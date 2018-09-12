@@ -52,7 +52,7 @@ send_destination_passenger_command: topic-passenger-command
 
 dispatch_assign_driver_expire_duration: 5M
 
-quartz_clustered: false
+quartz_clustered: true
 
 ocp_application_template: "{{ resources_dir }}/dispatch-service-template.yaml"
 ocp_binary_build_config_template: "{{ resources_dir }}/dispatch-service-binary.yaml"
