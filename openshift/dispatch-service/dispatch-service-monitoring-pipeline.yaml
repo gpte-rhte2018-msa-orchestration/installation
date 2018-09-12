@@ -54,7 +54,7 @@ objects:
               // cp application binary to xfer
               sh "cp target/${artifactId}-${version}.jar xfer"
               // download prometheus jmx agent from maven central
-              sh "curl https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.2.0/jmx_prometheus_javaagent-0.2.0.jar > xfer/prometheus/jmx_prometheus_javaagent.jar"
+              sh "curl https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.3.1/jmx_prometheus_javaagent-0.3.1.jar > xfer/prometheus/jmx_prometheus_javaagent.jar"
               openshift.withCluster() { // Use "default" cluster or fallback to OpenShift cluster detection
                 def bc = openshift.selector("bc", "${app_build}")
                 def builds = bc.startBuild("--from-dir=xfer")
