@@ -111,7 +111,7 @@ objects:
                   cpu: 200m
                   memory: 512Mi
                 limits:
-                  cpu: 500m
+                  cpu: 2000m
                   memory: '${MEMORY_LIMIT}'
               securityContext:
                 capabilities: {}
