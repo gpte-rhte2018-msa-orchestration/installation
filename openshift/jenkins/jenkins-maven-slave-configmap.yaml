@@ -47,7 +47,7 @@ items:
             <ttyEnabled>false</ttyEnabled>
             <resourceRequestCpu>200m</resourceRequestCpu>
             <resourceRequestMemory>500Mi</resourceRequestMemory>
-            <resourceLimitCpu>500m</resourceLimitCpu>
+            <resourceLimitCpu>1000m</resourceLimitCpu>
             <resourceLimitMemory>1Gi</resourceLimitMemory>
               <envVars>
               </envVars>
