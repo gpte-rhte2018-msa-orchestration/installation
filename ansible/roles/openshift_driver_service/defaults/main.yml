@@ -26,10 +26,10 @@ amqp_producer_ride_event: topic-ride-event
 
 driver_assigned_min_delay: 1
 driver_assigned_max_delay: 3
-ride_started_min_delay: 5
-ride_started_max_delay: 10
-ride_ended_min_delay: 5
-ride_ended_max_delay: 10
+ride_started_min_delay: 8
+ride_started_max_delay: 15
+ride_ended_min_delay: 8
+ride_ended_max_delay: 15
 
 ocp_application_template: "{{ resources_dir }}/driver-service-template.yaml"
 ocp_binary_build_config_template: "{{ resources_dir }}/driver-service-binary.yaml"
