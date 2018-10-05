@@ -41,5 +41,6 @@
   shell: |
     {{ openshift_cli }} process -f {{ jenkins_template }} \
     -p MEMORY_LIMIT=1Gi \
+    -p DISABLE_ADMINISTRATIVE_MONITORS=true \
     | {{ openshift_cli }} create -f - -n {{ ocp_project }}
   when: jenkins_deployed is failed

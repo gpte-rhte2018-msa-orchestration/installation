@@ -81,6 +81,8 @@ objects:
                   value: '${ENABLE_OAUTH}'
                 - name: OPENSHIFT_ENABLE_REDIRECT_PROMPT
                   value: 'true'
+                - name: DISABLE_ADMINISTRATIVE_MONITORS
+                  value: '${DISABLE_ADMINISTRATIVE_MONITORS}'
                 - name: KUBERNETES_MASTER
                   value: 'https://kubernetes.default:443'
                 - name: KUBERNETES_TRUST_CERTIFICATES
@@ -221,3 +223,10 @@ parameters:
     displayName: Jenkins ImageStreamTag
     name: JENKINS_IMAGE_STREAM_TAG
     value: 'jenkins:2'
+  - description: >-
+      Whether to perform memory intensive, possibly slow, synchronization with
+      the Jenkins Update Center on start.  If true, the Jenkins core update
+      monitor and site warnings monitor are disabled.
+    displayName: Disable memory intensive administrative monitors
+    name: DISABLE_ADMINISTRATIVE_MONITORS
+    value: 'false'
