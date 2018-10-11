@@ -222,7 +222,7 @@ parameters:
   - description: Name of the ImageStreamTag to be used for the Jenkins image.
     displayName: Jenkins ImageStreamTag
     name: JENKINS_IMAGE_STREAM_TAG
-    value: 'jenkins:2:v3.10.45-2'
+    value: 'jenkins:v3.10.45-2'
   - description: >-
       Whether to perform memory intensive, possibly slow, synchronization with
       the Jenkins Update Center on start.  If true, the Jenkins core update
